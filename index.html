@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Strategy Game</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            overflow: hidden; /* Prevent scrollbars */
+        }
+        #gameContainer {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        #gameCanvas {
+            width: 100%;
+            height: 100%;
+            display: block; /* Remove any extra space */
+        }
+        #planetCounts {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 10px;
+            border-radius: 5px;
+            z-index: 1;
+        }
+        #planetCounts div {
+            margin: 5px 0;
+        }
+        .player-count {
+            color: #4CAF50;
+        }
+        .ai-count {
+            color: #f44336;
+        }
+    </style>
+</head>
+<body>
+    <div id="gameContainer">
+        <canvas id="gameCanvas"></canvas>
+        <div id="planetCounts">
+            <div class="player-count">Player Planets: <span id="playerPlanetCount">0</span></div>
+            <div class="ai-count">AI Planets: <span id="aiPlanetCount">0</span></div>
+        </div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html> 
